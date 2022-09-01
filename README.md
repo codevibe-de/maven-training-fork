@@ -1,1 +1,1 @@
-# training.maven-basics
+# Maven Grundlagen
