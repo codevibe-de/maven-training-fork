@@ -16,8 +16,10 @@ Probieren Sie verschiedene Plugins oder Phasen auszuführen.
 Erstellen Sie die per Maven Konvention erwarteten Verzeichnisse für den Anwendungs-Quellcode
 und zusätzliche Ressourcen.
 
-Legen Sie im korrekten Verzeichnis eine Klasse an (ohne Package). 
+Legen Sie im entsprechenden Verzeichnis eine Klasse an (ohne Package). 
 Diese soll eine `main()` Methode enthalten.
+
+Legen Sie im entsprechenden Verzeichnis eine zusätzliche Ressource an, z.B. eine (leere) data.csv Datei.
 
 Lassen Sie Maven die Anwendung kompilieren. Ggf. gibt es hier eine Fehlermeldung wie z.B. 
 "Source option 5 is no longer supported. Use 6 or later." -- hierfür können Sie online
