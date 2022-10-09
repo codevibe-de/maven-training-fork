@@ -118,6 +118,17 @@ Keine Übung
 5. Erzeugen Sie erneut mittels des "help" Plugins die effektive POM, diesmal als `effective-pom-neu.xml` Datei.
    Vergleichen Sie beide Dateien z.B. mittels eines Diff-Tools
 
+## 055 - Profile
+
+### a) Reihenfolge
+
+1. Definieren Sie mindestens ein Profil in Ihrer `<USER-HOME>/.m2/settings.xml`, welches
+   ein Property namens `foo` setzt
+2. Definieren Sie zwei weitere Profile in Ihrer POM, die ebenfalls dieses Property setzen
+3. Lassen Sie sich das Property `foo` auflösen: `mvn help:evaluate -Dexpression=foo -P <profile>` unter
+   Setzen verschiedener Profile.
+4. Lassen Sie sich die Reihenfolge der aktiven Profile anzeigen: `mvn help:active-profiles -P <profile>`
+
 ## 060 - Archetypes
 
 1. Wechseln Sie in ein temporäres Verzeichnis, z.B. `C:\Temp`
