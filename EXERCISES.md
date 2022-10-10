@@ -102,7 +102,8 @@ ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Install
     * https://www.mojohaus.org/exec-maven-plugin/java-mojo.html
 3. Führen Sie den Plugin per Kommandozeile aus, sodass Ihre Main-Klasse von Maven aus gestartet wird
     * Tipp: `mvn <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>`
-    * Tipp: Properties können von der Kommandozeile mit `mvn -DpropertyName=propertyWert` gesetzt werden
+    * Tipp: Properties können von der Kommandozeile mit `mvn -D"propertyName=propertyWert"` gesetzt werden 
+   (insbesondere bei dieser Übung sind die Anführungsstriche wichtig)
 4. Fügen Sie den Plugin nun im `<build><plugins>` Block Ihrer POM hinzu. Mittels Kommandozeile führen Sie jetzt
    das Ziel "java" des Plugins aus: `mvn exec:java`. Wofür genau steht "exec" an dieser Stelle? Funktioniert es?
 5. Ergänzen Sie das Kommando um den notwendigen "mainClass" Parameter
