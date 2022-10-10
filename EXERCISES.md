@@ -50,6 +50,8 @@ Keine Übung
 
 ### a) Projekt mit Abhängigkeiten
 
+ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Installation der Demo-Libs)!
+
 1. Legen Sie ein Maven Projekt mit Abhängigkeiten auf `org.apache.commons:commons-lang3:3.11`
    und `org.junit.jupiter:junit-jupiter-api:5.9.0` (Junit5) an
 2. Stellen Sie die Abhängigkeiten mithilfe des "dependency" Plugins dar (als Liste und als Baum)
