@@ -64,7 +64,8 @@ Keine Übung
 
 ### b) Testfall (optional)
 
-1. Erstellen Sie einen leeren Testfall und rufen Sie Maven so auf, dass der Test ausgeführt wird. Wird ein Test
+1. Erstellen Sie einen leeren Testfall in der Klasse `RandomStringGeneratorTest`
+   und rufen Sie Maven so auf, dass Tests von Maven angestoßen werden. Wird ein Test
    tatsächlich ausgeführt?
 2. Fügen Sie noch die Dependency "junit-jupiter-engine" analog der "junit-jupiter-api" Dependency hinzu. Wie können
    Sie in Ihrer POM eine Wiederholung der gleichen Versionsnummer vermeiden?
