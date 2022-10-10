@@ -102,8 +102,8 @@ ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Install
     * https://www.mojohaus.org/exec-maven-plugin/java-mojo.html
 3. Führen Sie den Plugin per Kommandozeile aus, sodass Ihre Main-Klasse von Maven aus gestartet wird
     * Tipp: `mvn <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>`
-    * Tipp: Properties können von der Kommandozeile mit `mvn -D"propertyName=propertyWert"` gesetzt werden 
-   (insbesondere bei dieser Übung sind die Anführungsstriche wichtig)
+    * Tipp: Properties können von der Kommandozeile mit `mvn -D"propertyName=propertyWert"` gesetzt werden
+      (insbesondere bei dieser Übung sind die Anführungsstriche wichtig)
 4. Fügen Sie den Plugin nun im `<build><plugins>` Block Ihrer POM hinzu. Mittels Kommandozeile führen Sie jetzt
    das Ziel "java" des Plugins aus: `mvn exec:java`. Wofür genau steht "exec" an dieser Stelle? Funktioniert es?
 5. Ergänzen Sie das Kommando um den notwendigen "mainClass" Parameter
@@ -117,8 +117,8 @@ ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Install
 3. Mit welcher Version wird z.B. der "maven-compiler-plugin" deklariert?
 4. Suchen Sie in einem Online Repository nach der neusten Version des Plugins und deklarieren Sie diese als
    aktuelle Version in Ihrer POM.
-    * Tipp: Der Wert "org.apache.maven.pugins" ist der Default für ein `<groupId>` Element (via XSD), daher kann
-      dieser für Core Plugins entfallen
+    * Tipp: Der Wert "org.apache.maven.pugins" ist als Plugin-Group automatisch gesetzt (kann in settings.xml
+      geändert werden), somit kann dieser für Core Plugins entfallen
 5. Erzeugen Sie erneut mittels des "help" Plugins die effektive POM, diesmal als `effective-pom-neu.xml` Datei.
    Vergleichen Sie beide Dateien z.B. mittels eines Diff-Tools
 
