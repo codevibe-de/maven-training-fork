@@ -9,6 +9,20 @@
 2. Erstellen Sie eine `pom.xml`, welche nur die minimal benötigten Inhalte enthält (Google ist Ihr Freund)
 3. Probieren Sie aus, verschiedene Plugins oder Phasen auszuführen
 
+**Hinweis:** Das soeben erstellte "exercise" Verzeichnis kann nun auch in Ihre IDE eingelesen werden und als
+Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
+- Intellij IDEA: 
+   * File > New > Project from existing sources...
+   * Verzeichnis "exercise" selektieren >> OK
+   * "Import project from external model" selektieren, "Maven" selektieren >> Create
+   * New Window
+- Eclipse:
+   * File > Import
+   * Existing Maven Project >> Next
+   * Verzeichnis "training.maven-basics" selektieren
+   * Deselect All
+   * "/exercise/pom.xml" Eintrag selektieren >> Finish
+
 ### b) Mini Projekt
 
 1. Erstellen Sie die per Maven Konvention erwarteten Verzeichnisse für den Quellcode und zusätzliche Ressourcen
