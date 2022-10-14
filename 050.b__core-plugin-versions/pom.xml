@@ -5,6 +5,7 @@
     <groupId>de.auinger.training.maven_basics</groupId>
     <artifactId>050b-core-plugin-versions</artifactId>
     <version>1.0</version>
+
     <packaging>jar</packaging>
 
     <properties>

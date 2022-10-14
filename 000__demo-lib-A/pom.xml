@@ -6,6 +6,7 @@
     <groupId>de.auinger.training.maven-basics</groupId>
     <artifactId>demo-lib-A</artifactId>
     <version>4.5.0</version>
+
     <packaging>jar</packaging>
 
     <name>demo-lib-A</name>

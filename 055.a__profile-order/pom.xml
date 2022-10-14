@@ -5,6 +5,7 @@
     <groupId>de.auinger.training.maven_basics</groupId>
     <artifactId>055a-profile-order</artifactId>
     <version>1.0</version>
+
     <packaging>jar</packaging>
 
     <profiles>

@@ -5,6 +5,7 @@
     <groupId>de.auinger.training.maven_basics</groupId>
     <artifactId>040a-project-with-deps</artifactId>
     <version>1.0</version>
+
     <packaging>jar</packaging>
 
     <properties>
