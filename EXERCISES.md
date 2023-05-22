@@ -145,6 +145,15 @@ ist.
 6. Was wäre ein passender Scope für die JUnit5 Dependency? Welchen Scope kann oder sollte die
    Demo-Lib-A Dependency haben?
 
+### c) Bill-Of-Materials in Parent-POM
+
+Fügen Sie der Parent-POM in `parent-pom-artifact` einen `<dependencyManagement>` Block hinzu, in dem
+Sie eine Bibliothek Ihrer Wahl definieren.
+
+Dazu sollten Sie dann natürlich auch die Version des Parents erhöhen (da Änderung) und erneut installieren.
+
+Nutzen Sie dann die neue Parent-POM und speziell diese Bibliothek in einem Projekt Ihrer Wahl (z.B. `/exercise`).
+
 ## 050 - Plugins
 
 ### a) Der "exec" Plugin
