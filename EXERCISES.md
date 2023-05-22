@@ -1,5 +1,10 @@
 # Maven Grundlagen - Übungen
 
+**Hinweis:** Für die meisten Übungen ab Kapitel 040 existieren bereits Verzeichnisse, in denen
+Dateien und/oder
+Verzeichnisse zur leichteren Ausführung der Übung für Sie vorbereitet wurden. Diese Verzeichnisse
+folgen dem Nummerierungsschema (z.B. "040.b__junit-test")
+
 ## 010 - Einführung
 
 ### a) Minimale pom.xml
@@ -27,7 +32,8 @@ und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
 
 ### b) Mini Projekt
 
-1. Erstellen Sie die per Maven Konvention erwarteten Verzeichnisse für den Quellcode und zusätzliche
+1. Erstellen Sie im "exercise" Verzeichnis die per Maven Konvention erwarteten Unterverzeichnisse
+   für den Quellcode und zusätzliche
    Ressourcen
 2. Legen Sie im entsprechenden Verzeichnis eine Java Klasse an (ohne Package).
    Diese soll eine `main()` Methode enthalten.
@@ -73,8 +79,11 @@ Keine Übung
 
 ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Installation der Demo-Libs)!
 
-1. Legen Sie ein Maven Projekt mit Abhängigkeiten auf `org.apache.commons:commons-lang3:3.11`
-   und `org.junit.jupiter:junit-jupiter-api:5.9.0` (Junit5) an
+Diese Übung können Sie im Verzeichnis `/040.a__projekt-mit-abhängigkeiten` durchführen, wo eine
+leere `pom.xml` vorbereitet ist.
+
+1. Fügen Sie dem Maven Projekt Abhängigkeiten auf `org.apache.commons:commons-lang3:3.11`
+   und `org.junit.jupiter:junit-jupiter-api:5.9.0` (Junit5) hinzu
 2. Stellen Sie die Abhängigkeiten mithilfe des "dependency" Plugins dar (als Liste und als Baum)
 3. Erweitern Sie das Projekt um Abhängigkeiten auf `demo-lib-A` und `demo-lib-B`. Welche transitiven
    Abhängigkeiten kommen dazu? In welcher Version? Und welche nicht?
@@ -86,6 +95,9 @@ ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Install
    mit in das Projekt aufgenommen wird
 
 ### b) Testfall (optional)
+
+Diese Übung können Sie im Verzeichnis `/040.b__junit-test` durchführen, wo bereits etwas vorbereitet
+ist.
 
 1. Erstellen Sie einen leeren Testfall in der Klasse `RandomStringGeneratorTest`
    und rufen Sie Maven so auf, dass Tests von Maven angestoßen werden. Wird ein Test
@@ -116,6 +128,9 @@ ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Install
 ## 050 - Plugins
 
 ### a) Der "exec" Plugin
+
+Diese Übung können Sie im Verzeichnis `/050.a__exec-plugin` durchführen, wo bereits etwas vorbereitet
+ist.
 
 1. Erstellen Sie eine Klasse mit einer `main()` Methode in Ihrem Projekt, die eine Ausgabe
    auf `System.out` macht
