@@ -69,6 +69,26 @@ und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
     - `/000__demo-lib-A`
     - `/000__demo-lib-B`
 
+### d) Parent-POM
+
+Legen Sie ein Verzeichnis `/parent-pom-artifact` im Projekt an.
+
+Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM für Ihre POM im `/exercise` Unterverzeichnis sein.
+
+In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon Verionsnummern
+von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere Validation-Warnungen).
+
+Nun installieren Sie die Parent-POM mittels `mvn install` in Ihr lokales Repository.
+
+Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten entsprechend anpassen):
+````xml
+  <parent>
+    <groupId>de.auinger</groupId>
+    <artifactId>maven-training-parent-pom</artifactId>
+    <version>1.0</version>
+  </parent>
+````
+
 ## 030 - Properties
 
 Keine Übung
