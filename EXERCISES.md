@@ -205,12 +205,13 @@ ist.
 
 ### c) Buildnumber
 
-Der "buildnumber-maven-plugin" kann eine automatische Build-Nummer generieren.
+Der "buildnumber-maven-plugin" kann eine automatische Build-Nummer generieren. Diese wird als
+Property `${buildNumber}` hinterlegt.
 
-Diese wird als Property `${buildNumber}` hinterlegt.
+Für diese Übung arbeiten Sie in der Datei `050.c__buildnumber/pom.xml`.
 
-Definieren Sie den Plugin in dem `<pluginManagement>` Block, um diesen dem Build-Prozess bekannt
-zu machen.
+Definieren Sie dort den Plugin in dem `<pluginManagement>` Block (innerhalb von `<build>`), um
+diesen dem Build-Prozess bekannt zu machen.
 
 Führen Sie den Plugin dann aus und lassen Sie sich mithilfe des "help" Plugins den Wert des
 Platzhalters ausgeben. Dies geht auf Basis des `help:evaluate` Goals und Angabe einer
