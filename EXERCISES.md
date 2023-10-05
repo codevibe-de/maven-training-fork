@@ -37,11 +37,11 @@ und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
    Ressourcen
 2. Legen Sie im entsprechenden Verzeichnis eine Java Klasse an (ohne Package).
    Diese soll eine `main()` Methode enthalten.
-3. Legen Sie im entsprechenden Verzeichnis eine zusätzliche Ressource an, z.B. eine (
-   leere) `data.csv` Datei.
+3. Legen Sie im entsprechenden Verzeichnis eine zusätzliche Ressource an, z.B. eine (leere)
+   `data.csv` Datei.
 4. Lassen Sie Maven die Anwendung kompilieren.
-    - Ggf. gibt es hier eine Fehlermeldung wie z.B. "Source option 5 is no longer supported. Use 6
-      or later."
+    - Ggf. gibt es hier eine Fehlermeldung wie z.B. `"Source option 5 is no longer supported. Use 6
+      or later."`
       -- hierfür können Sie online nach einer Lösung suchen und benutzen, Sie müssen diese noch
       nicht verstehen :)
 5. Schauen Sie sich den Output von Maven an (`target` Verzeichnis).
@@ -76,7 +76,8 @@ Legen Sie ein Verzeichnis `/parent-pom-artifact` im Projekt an.
 Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM für Ihre POM
 im `/exercise` Unterverzeichnis sein.
 
-In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon Verionsnummern
+In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon
+Versionsnummern
 von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere
 Validation-Warnungen).
 
@@ -86,6 +87,7 @@ Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten
 anpassen):
 
 ````xml
+
 <parent>
     <groupId>de.auinger</groupId>
     <artifactId>maven-training-parent-pom</artifactId>
@@ -111,7 +113,7 @@ leere `pom.xml` vorbereitet ist.
 2. Stellen Sie die Abhängigkeiten mithilfe des "dependency" Plugins dar (als Liste und als Baum)
 3. Erweitern Sie das Projekt um Abhängigkeiten auf `demo-lib-A` und `demo-lib-B`. Welche transitiven
    Abhängigkeiten kommen dazu? In welcher Version? Und welche nicht?
-4. Entfernen Sie die `commons-lang3` Dependency aus ihrer POM -- was ändert sich nun bzgl. der
+4. Entfernen Sie die `commons-lang3` Dependency aus ihrer POM -- was ändert sich nun bezüglich der
    transitiven Abhängigkeiten?
 5. Lassen Sie sich mögliche Upgrades anzeigen
 6. Führen Sie ein Upgrade der Dependencies aus
@@ -129,7 +131,7 @@ ist.
 2. Fügen Sie noch die Dependency "junit-jupiter-engine" analog der "junit-jupiter-api" Dependency
    hinzu. Wie können Sie in Ihrer POM eine Wiederholung der gleichen Versionsnummer vermeiden?
 3. Damit Maven JUnit 5 Tests ausführen kann, brauchen Sie noch den folgenden Block in Ihrer POM. Was
-   da passiert, verstehen wir später...
+   da passiert, verstehen wir später ...
    ````xml
     <build>
         <plugins>
@@ -142,7 +144,7 @@ ist.
         </plugins>
     </build>
     ````
-4. Führt Maven den Test nun aus? Dies sollte so sein...
+4. Führt Maven den Test nun aus? Dies sollte so sein ...
 5. Implementieren Sie in dem Test nun einen Aufruf an die Methode
    `com.example.generators.RandomStringGenerator#generateRandomString`. Diese Klasse finden Sie in
    der Demo-Lib-A. Der Test soll sicherstellen, dass das Ergebnis die richtige Länge hat.
@@ -157,8 +159,8 @@ Sie eine Bibliothek Ihrer Wahl definieren.
 Dazu sollten Sie dann natürlich auch die Version des Parents erhöhen (da Änderung) und erneut
 installieren.
 
-Nutzen Sie dann die neue Parent-POM und speziell diese Bibliothek in einem Projekt Ihrer Wahl (
-z.B. `/exercise`).
+Nutzen Sie dann die neue Parent-POM und speziell diese Bibliothek in einem Projekt Ihrer Wahl
+(z.B. `/exercise`).
 
 ## 050 - Plugins
 
@@ -194,7 +196,7 @@ ist.
 4. Suchen Sie in einem Online Repository nach der neusten Version des Plugins und deklarieren Sie
    diese als
    aktuelle Version in Ihrer POM.
-    * Tipp: Der Wert "org.apache.maven.pugins" ist als Plugin-Group automatisch gesetzt (kann in
+    * Tipp: Der Wert "org.apache.maven.plugins" ist als Plugin-Group automatisch gesetzt (kann in
       settings.xml
       geändert werden), somit kann dieser für Core Plugins entfallen
 5. Erzeugen Sie erneut mittels des "help" Plugins die effektive POM, diesmal
