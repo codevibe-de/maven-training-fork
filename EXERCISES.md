@@ -203,6 +203,19 @@ ist.
    als `effective-pom-neu.xml` Datei.
    Vergleichen Sie beide Dateien z.B. mittels eines Diff-Tools
 
+### c) Buildnumber
+
+Der "buildnumber-maven-plugin" kann eine automatische Build-Nummer generieren.
+
+Diese wird als Property `${buildNumber}` hinterlegt.
+
+Definieren Sie den Plugin in dem `<pluginManagement>` Block, um diesen dem Build-Prozess bekannt
+zu machen.
+
+Führen Sie den Plugin dann aus und lassen Sie sich mithilfe des "help" Plugins den Wert des
+Platzhalters ausgeben. Dies geht auf Basis des `help:evaluate` Goals und Angabe einer
+Expression: `-Dexpression=buildNumber`.
+
 ## 055 - Profile
 
 ### a) Reihenfolge
