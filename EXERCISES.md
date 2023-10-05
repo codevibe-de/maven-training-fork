@@ -73,20 +73,24 @@ und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
 
 Legen Sie ein Verzeichnis `/parent-pom-artifact` im Projekt an.
 
-Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM für Ihre POM im `/exercise` Unterverzeichnis sein.
+Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM für Ihre POM
+im `/exercise` Unterverzeichnis sein.
 
 In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon Verionsnummern
-von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere Validation-Warnungen).
+von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere
+Validation-Warnungen).
 
 Nun installieren Sie die Parent-POM mittels `mvn install` in Ihr lokales Repository.
 
-Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten entsprechend anpassen):
+Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten entsprechend
+anpassen):
+
 ````xml
-  <parent>
+<parent>
     <groupId>de.auinger</groupId>
     <artifactId>maven-training-parent-pom</artifactId>
     <version>1.0</version>
-  </parent>
+</parent>
 ````
 
 ## 030 - Properties
@@ -150,15 +154,18 @@ ist.
 Fügen Sie der Parent-POM in `parent-pom-artifact` einen `<dependencyManagement>` Block hinzu, in dem
 Sie eine Bibliothek Ihrer Wahl definieren.
 
-Dazu sollten Sie dann natürlich auch die Version des Parents erhöhen (da Änderung) und erneut installieren.
+Dazu sollten Sie dann natürlich auch die Version des Parents erhöhen (da Änderung) und erneut
+installieren.
 
-Nutzen Sie dann die neue Parent-POM und speziell diese Bibliothek in einem Projekt Ihrer Wahl (z.B. `/exercise`).
+Nutzen Sie dann die neue Parent-POM und speziell diese Bibliothek in einem Projekt Ihrer Wahl (
+z.B. `/exercise`).
 
 ## 050 - Plugins
 
 ### a) Der "exec" Plugin
 
-Diese Übung können Sie im Verzeichnis `/050.a__exec-plugin` durchführen, wo bereits etwas vorbereitet
+Diese Übung können Sie im Verzeichnis `/050.a__exec-plugin` durchführen, wo bereits etwas
+vorbereitet
 ist.
 
 1. Erstellen Sie eine Klasse mit einer `main()` Methode in Ihrem Projekt, die eine Ausgabe
