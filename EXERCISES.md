@@ -126,12 +126,12 @@ Diese Übung können Sie im Verzeichnis `/040.b__junit-test` durchführen, wo be
 ist.
 
 1. Erstellen Sie einen leeren Testfall in der Klasse `RandomStringGeneratorTest`
-   und rufen Sie Maven so auf, dass Tests von Maven angestoßen werden. Wird ein Test
-   tatsächlich ausgeführt?
 2. Fügen Sie noch die Dependency "junit-jupiter-engine" analog der "junit-jupiter-api" Dependency
    hinzu. Wie können Sie in Ihrer POM eine Wiederholung der gleichen Versionsnummer vermeiden?
-3. Damit Maven JUnit 5 Tests ausführen kann, brauchen Sie noch den folgenden Block in Ihrer POM. Was
-   da passiert, verstehen wir später ...
+3. Rufen Sie Maven so auf, dass Tests von Maven angestoßen werden. Wird ein Test
+   tatsächlich ausgeführt? Dies kann bei älteren Maven Versionen nicht der Fall sein!
+4. Für ältere Maven-Version muss der Surefire Plugin auf eine höhere Version gehoben werden (es
+   braucht mindestens 2.22.0) -- also ggf. folgenden Block einfügen:
    ````xml
     <build>
         <plugins>
@@ -144,11 +144,11 @@ ist.
         </plugins>
     </build>
     ````
-4. Führt Maven den Test nun aus? Dies sollte so sein ...
-5. Implementieren Sie in dem Test nun einen Aufruf an die Methode
+5. Führt Maven den Test nun aus? Dies sollte so sein ...
+6. Implementieren Sie in dem Test nun einen Aufruf an die Methode
    `com.example.generators.RandomStringGenerator#generateRandomString`. Diese Klasse finden Sie in
    der Demo-Lib-A. Der Test soll sicherstellen, dass das Ergebnis die richtige Länge hat.
-6. Was wäre ein passender Scope für die JUnit5 Dependency? Welchen Scope kann oder sollte die
+7. Was wäre ein passender Scope für die JUnit5 Dependency? Welchen Scope kann oder sollte die
    Demo-Lib-A Dependency haben?
 
 ### c) Bill-Of-Materials in Parent-POM
