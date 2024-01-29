@@ -33,8 +33,7 @@ und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
 ### b) Mini Projekt
 
 1. Erstellen Sie im "exercise" Verzeichnis die per Maven Konvention erwarteten Unterverzeichnisse
-   für den Quellcode und zusätzliche
-   Ressourcen
+   für Java-Quellcode und die Ressourcen an (also insgesamt **zwei** konkrete Unterverzeichnisse)
 2. Legen Sie im entsprechenden Verzeichnis eine Java Klasse an (ohne Package).
    Diese soll eine `main()` Methode enthalten.
 3. Legen Sie im entsprechenden Verzeichnis eine zusätzliche Ressource an, z.B. eine (leere)
@@ -77,8 +76,7 @@ Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM fü
 im `/exercise` Unterverzeichnis sein.
 
 In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon
-Versionsnummern
-von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere
+Versionsnummern von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere
 Validation-Warnungen).
 
 Nun installieren Sie die Parent-POM mittels `mvn install` in Ihr lokales Repository.
@@ -105,7 +103,7 @@ Keine Übung
 
 ACHTUNG -- für diese Übung muss vorher "020.c" bearbeitet worden sein (Installation der Demo-Libs)!
 
-Diese Übung können Sie im Verzeichnis `/040.a__projekt-mit-abhängigkeiten` durchführen, wo eine
+Diese Übung können Sie im Verzeichnis `/040.a__projekt-mit-dependencies` durchführen, wo eine
 leere `pom.xml` vorbereitet ist.
 
 1. Fügen Sie dem Maven Projekt Abhängigkeiten auf `org.apache.commons:commons-lang3:3.11`
@@ -178,11 +176,9 @@ ist.
 3. Führen Sie den Plugin per Kommandozeile aus, sodass Ihre Main-Klasse von Maven aus gestartet wird
     * Tipp: `mvn <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>`
     * Tipp: Properties können von der Kommandozeile mit `mvn -D"propertyName=propertyWert"` gesetzt
-      werden
-      (insbesondere bei dieser Übung sind die Anführungsstriche wichtig)
+      werden (insbesondere bei dieser Übung sind die Anführungsstriche wichtig)
 4. Fügen Sie den Plugin nun im `<build><plugins>` Block Ihrer POM hinzu. Mittels Kommandozeile
-   führen Sie jetzt
-   das Ziel "java" des Plugins aus: `mvn exec:java`. Wofür genau steht "exec" an dieser Stelle?
+   führen Sie jetzt das Ziel "java" des Plugins aus: `mvn exec:java`. Wofür genau steht "exec" an dieser Stelle?
    Funktioniert es?
 5. Ergänzen Sie das Kommando um den notwendigen "mainClass" Parameter
 6. Hinterlegen Sie den "mainClass" Parameter im `<configuration>` Block des Plugins
