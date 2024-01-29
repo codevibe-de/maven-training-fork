@@ -4,4 +4,6 @@
 **/.project
 **/.classpath
 **/.settings
+
+# leave root .project file so that Eclipse is be able to show the complete project incl. a rendered EXERCISES.md
 !/.project
