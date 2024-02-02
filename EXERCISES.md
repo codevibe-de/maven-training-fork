@@ -87,7 +87,7 @@ anpassen):
 ````xml
 
 <parent>
-    <groupId>de.auinger</groupId>
+    <groupId>de.codevibe.maven-training</groupId>
     <artifactId>maven-training-parent-pom</artifactId>
     <version>1.0</version>
 </parent>
@@ -201,17 +201,22 @@ ist.
 
 ### c) Buildnumber
 
-Der "buildnumber-maven-plugin" kann eine automatische Build-Nummer generieren. Diese wird als
-Property `${buildNumber}` hinterlegt.
+Der "buildnumber-maven-plugin" (https://www.mojohaus.org/buildnumber-maven-plugin/)
+kann eine automatische Build-Nummer generieren. Diese wird als Property `${buildNumber}` hinterlegt.
 
 Für diese Übung arbeiten Sie in der Datei `050.c__buildnumber/pom.xml`.
 
-Definieren Sie dort den Plugin in dem `<pluginManagement>` Block (innerhalb von `<build>`), um
-diesen dem Build-Prozess bekannt zu machen.
+Definieren Sie dort diesen Plugin in dem `<plugins>` Block (innerhalb von `<build>`), um
+ihn dem Build-Prozess bekannt zu machen und binden Sie den Plugin an die "initialize" Phase (Achtung,
+entgegen der Dokumentation scheint der Plugin sich nicht selbst an diese Phase zu binden).
 
-Führen Sie den Plugin dann aus und lassen Sie sich mithilfe des "help" Plugins den Wert des
+Lassen Sie sich mithilfe des "help" Plugins den Wert des
 Platzhalters ausgeben. Dies geht auf Basis des `help:evaluate` Goals und Angabe einer
-Expression: `-Dexpression=buildNumber`.
+Expression: `-Dexpression=buildNumber`:
+
+````shell
+mvn validate help:evaluate -Dexpression=buildNumber
+````
 
 ## 055 - Profile
 
