@@ -15,7 +15,9 @@
     </properties>
 
     <scm>
-        <url>https://github.com/tauinger-de/training.maven-basics.git</url>
+        <developerConnection>
+            scm:git:https://github.com/codevibe-de/maven-training.git
+        </developerConnection>
     </scm>
 
 </project>
