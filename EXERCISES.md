@@ -241,3 +241,21 @@ Expression: `-Dexpression=buildNumber`.
 4. Vergessen Sie nicht, die Module in der Parent-POM zu hinterlegen (`<module>` Elemente) mit Namen
    der angelegten Modul-Verzeichnisse
 5. Führen Sie den Build für alle oder für ein Modul aus
+
+## 080 - Sonstiges
+
+### Wrapper
+
+Generieren Sie den Maven-Wrapper im Verzeichnis `/080.wrapper`:
+
+````shell
+mvn wrapper:wrapper
+````
+
+Schauen Sie sich den Inhalt der Skripte und des generierten `/.mvn` Verzeichnisses an.
+
+Führen Sie einen (leeren) Build mittels Wrapper aus:
+
+````shell
+mvn clean compile
+````
