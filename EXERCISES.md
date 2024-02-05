@@ -79,10 +79,12 @@ eingelesen werden -- und als Maven-unterstütztes Projekt Ihnen weitere Dienste 
 
 ### c) Demo-Libs
 
-1. Installieren Sie mithilfe von Maven in Ihr lokales Maven-Repository die Bibliotheken aus den
-   Verzeichnissen
-    - `/000__demo-lib-A`
-    - `/000__demo-lib-B`
+Installieren Sie mithilfe von Maven (`mvn install`) in Ihr lokales Maven-Repository die Bibliotheken aus den
+Verzeichnissen
+- `/000__demo-lib-A`
+- `/000__demo-lib-B`
+
+Sinn der Übung ist, dass diese Bibliotheken später zur Verwendung als Dependencies parat stehen.
 
 ### d) Parent-POM
 
@@ -100,6 +102,7 @@ Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten
 anpassen):
 
 ````xml
+
 <parent>
     <groupId>de.codevibe.maven-training</groupId>
     <artifactId>maven-training-parent-pom</artifactId>
