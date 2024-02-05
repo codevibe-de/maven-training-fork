@@ -86,14 +86,13 @@ eingelesen werden -- und als Maven-unterstütztes Projekt Ihnen weitere Dienste 
 
 ### d) Parent-POM
 
-Legen Sie ein Verzeichnis `/parent-pom-artifact` im Projekt an.
+Legen Sie ein Verzeichnis `/parent-pom-artifact` im Projekt (auf gleicher Ebene wie `/exercise`) an.
 
-Dort wollen wir eine eigene Parent-POM definieren. Dies soll eine Parent-POM für Ihre POM
-im `/exercise` Unterverzeichnis sein.
+Dort wollen wir eine eigene Parent-POM definieren. Diese soll eine Parent-POM für Ihre POM
+im `/exercise` Projekt sein.
 
 In der Parent-POM können Sie z.B. die Java Version, das Encoding und ggf. sogar schon
-Versionsnummern von Plugins definieren (aktuell erzeugt Maven 3.9.2 mit den Standard-Plugins mehrere
-Validation-Warnungen).
+Versionsnummern von Plugins definieren.
 
 Nun installieren Sie die Parent-POM mittels `mvn install` in Ihr lokales Repository.
 
@@ -101,13 +100,14 @@ Ab jetzt kann dieser Parent in anderen Projekten genutzt werden (GAV-Koordinaten
 anpassen):
 
 ````xml
-
 <parent>
     <groupId>de.codevibe.maven-training</groupId>
     <artifactId>maven-training-parent-pom</artifactId>
     <version>1.0</version>
 </parent>
 ````
+
+Probieren Sie die Nutzung der Parent-POM in Ihrem `/exercise` Projekt aus.
 
 ## 030 - Properties
 
