@@ -7,7 +7,21 @@ folgen dem Nummerierungsschema (z.B. "040.b__junit-test")
 
 ## 010 - Einführung
 
-### a) Minimale pom.xml
+### a) IDE Import
+
+Importieren Sie dieses Projekt in Ihre IDE.
+
+- Intellij IDEA:
+    * Menü: File > New > Project from Existing Sources...
+    * Verzeichnis "maven-training" selektieren >> OK
+    * New Window
+- Eclipse:
+    * Menü: File > Import
+    * "General / Existing Projects into Workspace" selektieren >> Next
+    * Verzeichnis **oberhalb** von "maven-training" selektieren
+    * "maven-training" Eintrag selektieren >> Finish
+
+### b) Minimale pom.xml
 
 1. Erstellen Sie sich im Projekt ein Arbeitsverzeichnis mit Namen "exercise" (auf gleicher Ebene wie
    diese Datei)
@@ -15,33 +29,35 @@ folgen dem Nummerierungsschema (z.B. "040.b__junit-test")
    welche nur die minimal benötigten Inhalte enthält (Google ist Ihr Freund)
 3. Probieren Sie aus, verschiedene Plugins oder Phasen auszuführen
 
-**Hinweis:** Das soeben erstellte "exercise" Verzeichnis kann nun auch in Ihre IDE eingelesen werden
-und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
+**Hinweis:** Das soeben erstellte "exercise" Verzeichnis kann nun in Ihrer IDE als dediziertes Maven-Projekt
+eingelesen werden -- und als Maven-unterstütztes Projekt Ihnen weitere Dienste leisten:
 
 - Intellij IDEA:
-    * File > New > Project from existing sources...
+    * Menü: File > New > Module from Existing Sources...
     * Verzeichnis "exercise" selektieren >> OK
     * "Import project from external model" selektieren, "Maven" selektieren >> Create
-    * New Window
+    * das Unterverzeichnis "exercise" wird nun anders dargestellt
 - Eclipse:
-    * File > Import
-    * Existing Maven Project >> Next
-    * Verzeichnis "training.maven-basics" selektieren
+    * Menü: File > Import
+    * "Maven / Existing Maven Projects" selektieren >> Next
+    * Verzeichnis "maven-training" selektieren
     * Deselect All
     * "/exercise/pom.xml" Eintrag selektieren >> Finish
+    * das Unterverzeichnis "exercise" wird nun anders dargestellt (im "Project Explorer") bzw. top-level eingebunden
+      (im "Package Explorer")
 
-### b) Mini Projekt
+### c) Mini Projekt
 
-1. Erstellen Sie im "exercise" Verzeichnis die per Maven Konvention erwarteten Unterverzeichnisse
-   für Java-Quellcode und die Ressourcen an (also insgesamt **zwei** konkrete Unterverzeichnisse)
-2. Legen Sie im entsprechenden Verzeichnis eine Java Klasse an (ohne Package).
+1. Erstellen Sie im "exercise" Verzeichnis die per Maven Konvention erwarteten Unterverzeichnisse:
+    - `/src/main/java`
+    - `/src/main/resources`
+2. Legen Sie im entsprechenden Verzeichnis eine Java Klasse an (mit oder ohne Package).
    Diese soll eine `main()` Methode enthalten.
 3. Legen Sie im entsprechenden Verzeichnis eine zusätzliche Ressource an, z.B. eine (leere)
    `data.csv` Datei.
-4. Lassen Sie Maven die Anwendung kompilieren.
+4. Lassen Sie Maven die Anwendung kompilieren (auf der Kommandozeile).
     - Ggf. gibt es hier eine Fehlermeldung wie z.B. `"Source option 5 is no longer supported. Use 6
-      or later."`
-      -- hierfür können Sie online nach einer Lösung suchen und benutzen, Sie müssen diese noch
+      or later."` -- hierfür können Sie online nach einer Lösung suchen und benutzen, Sie müssen diese noch
       nicht verstehen :)
 5. Schauen Sie sich den Output von Maven an (`target` Verzeichnis).
 6. Was passiert dort außerdem noch, wenn Sie die Anwendung paketieren lassen?
