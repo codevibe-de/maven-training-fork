@@ -60,19 +60,20 @@ eingelesen werden -- und als Maven-unterstütztes Projekt Ihnen weitere Dienste 
       or later."` -- hierfür können Sie online nach einer Lösung suchen und benutzen, Sie müssen diese noch
       nicht verstehen :)
 5. Schauen Sie sich den Output von Maven an (`target` Verzeichnis).
-6. Was passiert dort außerdem noch, wenn Sie die Anwendung paketieren lassen?
+6. Was passiert dort außerdem noch, wenn Sie die Anwendung paketieren (`mvn package`) lassen?
 
 ## 020 - Project Object Model
 
 ### a) Packaging "jar"
 
-1. Legen Sie das Packaging in Ihrer POM als `jar` fest -- ändert sich etwas?
-2. Was passiert, wenn Sie `mvn install` aufrufen?
+1. Legen Sie das Packaging in Ihrer POM als `jar` fest
+2. Ändert sich etwas an dem Output im `target` Verzeichnis, wenn Sie `mvn package` aufrufen?
 
 ### b) Packaging "pom"
 
 1. Ändern Sie das Packaging zu `pom` und erhöhen Sie die Version in Ihrer POM
-2. Rufen Sie erneut `mvn install` auf
+2. Rufen Sie nun `mvn install` auf -- damit wird das Output-Artefakt in Ihr lokales Repository
+   installiert
 3. Schauen Sie in Ihrem lokalen Repository nach, welche Dateien dort installiert wurden
     * Tipp: Im Home-Verzeichnis unter ".m2/repository"
     * Tipp: Ihre "groupId" bestimmt den Ablageort
